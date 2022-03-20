@@ -34,7 +34,7 @@
     dots: false,
     infinite: true,
     speed: 300,
-    infinite: true,
+    infinite: false,
     autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,

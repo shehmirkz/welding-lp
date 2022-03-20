@@ -83,6 +83,12 @@ p {
     background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);   
     color: #fff;
 }
+button.slick-prev.slick-arrow {
+    background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);
+}
+.slick-prev, .slick-next {
+    height: 0;
+}
 .container-fluid {
     padding: 0;
 }
@@ -178,12 +184,23 @@ header {
 .mig {
     padding-top: 90px;
     padding-bottom: 30px;
+    background: url(../images/Ellipse3.png) no-repeat;
+    background-position: right;
 }
 .mig .play {
     background: url(../images/play-vid.png) no-repeat center;
     width: 525px;
     height: 430px;
     border: 2px solid #BBC0C6;
+    border-radius: 12px;
+}
+.mig-txt {
+    padding-top: 28px;
+}
+.mig-row {
+    padding: 0 63px;
+}
+.play iframe {
     border-radius: 12px;
 }
 .mig .play a {
@@ -205,13 +222,13 @@ header {
     line-height: 26px;
     padding-right: 20px;
     padding-right: 108px;
-    padding-bottom: 35px;
+    padding-bottom: 16px;
 }
 
 /* Center Heading Styling */
 
 .center-heading {
-    padding: 50px 0;
+    padding: 50px 0 10px 0;
 }
 .center-heading h6 {
     margin: auto;
@@ -225,11 +242,15 @@ header {
 
 /* Top Courses Section Styling */
 
+.center-heading {
+    background: url(../images/Ellipse4.png) no-repeat;
+    background-position: left;
+}
 .top-course-row {
-    padding: 0 90px;
+    padding: 0 0px;
 }
 .top-courses .top-course {
-    width: 255px;
+    width: 100%;
     height: 200px;
     border-radius: 10px;
     border: 1.5px solid #BBC0C6;
@@ -239,35 +260,40 @@ header {
 }
 .top-courses .course-one {
     background: url(../images/top-course1.png) no-repeat center;
+    background-size: cover;
 }
 .top-courses .course-two {
     background: url(../images/top-course2.png) no-repeat center;
+    background-size: cover;
 }
 .top-courses .course-three {
     background: url(../images/top-course3.png) no-repeat center;
+    background-size: cover;
 }
 .top-courses .course-four {
     background: url(../images/top-course4.png) no-repeat center;
+    background-size: cover;
 }
 
 /* Courses Section Styling */
 .courses .course {
-    height: 470px;
-    width: 350px;
-    left: 165px;
-    top: 2162px;
+    width: 100%;
     border-radius: 12px;
     border: 2px solid #BBC0C6;
     padding: 5px;
     background-color: #141E31;
-    margin-bottom: 35px;
+    margin-bottom: 27px;
+    padding-bottom: 38px;
 }
 .course-row {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 80px;
+    padding: 0 0px;
+}
+.course-img {
+    margin: 4px;
 }
 .course img {
     display: flex;
@@ -275,6 +301,7 @@ header {
     align-items: center;
     margin: auto;
     padding-top: 5px;
+    width: 100%;
 }
 .course-txt {
     padding: 0 9px;
@@ -297,7 +324,10 @@ header {
 }
 
 /* Certificate Section Styling */
-
+.certificate {
+    background: url(../images/Ellipse3.png) no-repeat;
+    background-position: right;
+}
 .certif-row {
     padding: 30px 0;
 }
@@ -313,8 +343,13 @@ header {
     padding-bottom: 20px;
     padding-right: 115px;
 }
+.certificate-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .certificate .certif {
-    width: 525px;
+    width: 100%;
     height: 388px;
     border-radius: 12px;
     background: #141E31;
@@ -339,7 +374,7 @@ header {
     width: 158px;
 }
 .job {
-    width: 540px;
+    /* width: 100%;
     height: 174px;
     border-radius: 10px;
     background: #141E31;
@@ -347,7 +382,17 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 25px; */
+    width: 100%;
+    height: 174px;
+    border-radius: 10px;
+    background: #141E31;
+    border: 2px solid #BBC0C6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 25px;
+    padding: 0 30px;
 }
 .job-btn {
     margin-top: 50px;
@@ -373,13 +418,18 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 92px;
+    padding: 0 0;
 }
 .job-view-all {
     padding-top: 20px;
 }
 
 /* Application Section Styling */
+.application {
+    background: url(../images/Ellipse3.png) no-repeat;
+    background-position: right;
+    padding: 40px 0;
+}
 .app-txt {
     padding-top: 120px;
     padding-left: 26px;
@@ -418,15 +468,20 @@ header {
 /* Global Post Section Styling */
 
 .global-posts .global-post {
-    width: 350px;
-    height: 483px;
+    width: 93%;
+    height: auto;
     background: #141E31;
     border: 2px solid #BBC0C6;
     border-radius: 12px;
     margin-left: 10px;
+    padding-bottom: 20px;
+}
+.slick-slide img {
+    display: block;
+    width: 100%;
 }
 .global-row {
-    padding: 0 90px;
+    padding: 0 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -474,7 +529,7 @@ header {
     height: 40px;
     background: #BBC0C6;
     position: absolute;
-    left: 67px;
+    left: -22px;
 }
 .slick-prev:hover::before {
     background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);
@@ -491,7 +546,7 @@ header {
     height: 40px;
     background: #BBC0C6;
     position: absolute;
-    right: 68px;
+    right: -11px;
 }
 .slick-next:hover::before {
     background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);
@@ -510,7 +565,7 @@ header {
     align-items: center;
 }
 .go-big-main {
-    width: 1110px;
+    width: 99%;
     height: 216px;
     border-radius: 16px;
     border: 2px solid #BBC0C6;
@@ -518,7 +573,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
 }
 .go-big-txt {
     padding: 0px 68px 0 80px;
@@ -530,6 +584,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 .go-big-button {
     display: flex;
@@ -541,7 +596,7 @@ footer {
     padding: 50px 0 0 0;
 }
 .footer-row {
-    padding: 0 88px;
+    padding: 0 0px;
 }
 .footer-logo-sec ul {
     display: flex;
@@ -600,7 +655,7 @@ footer {
     color: #FF0F00;
 }
 .footer-contact ul li h3 {
-    width: 57%;
+    width: 62%;
 }
 .footer-contact ul li img {
     height: 100%;
@@ -640,14 +695,14 @@ footer hr {
         padding: 0 3px;
     }
     .top-courses .top-course {
-        width: 228px;
+        
     }
-    .courses .course {
+    /* .courses .course {
         width: 319px;
     }
     .course img {
         width: 98%;
-    }
+    } */
     .footer-contact ul li h3 {
         width: 68%;
     }
@@ -784,8 +839,9 @@ footer hr {
         padding: 12px 0;
     }
     .job {
-        width: 457px;
+        width: 100%;
         height: 159px;
+        padding: 0 12px;
     }
     .app-img img {
         width: 100%;
@@ -803,7 +859,7 @@ footer hr {
         height: 50px;
     }
     .go-big-main {
-        width: 840px;
+        width: 100%;
         height: 200px;
     }
     footer hr {
@@ -850,6 +906,11 @@ footer hr {
         justify-content: center;
         align-items: center;
         padding-top: 15px;
+        background: linear-gradient(91.81deg, #ff110021 1.76%, #ff6a6a7a 98.7%);
+    }
+    .navbar-nav {
+        width: 100%;
+        margin-top: 18px;
     }
     .mig .play {
         width: 329px;
@@ -921,8 +982,9 @@ footer hr {
         padding: 0 0;
     }
     .job {
-        width: 329px;
+        width: 100%;
         height: 141px;
+        padding: 0 10px;
     }
     .job-btn a {
         width: 69px;
@@ -1057,9 +1119,14 @@ footer hr {
         justify-content: center;
         align-items: center;
         padding-top: 15px;
+        background: linear-gradient(91.81deg, #ff110021 1.76%, #ff6a6a7a 98.7%);
+    }
+    .navbar-nav {
+        width: 100%;
+        margin-top: 18px;
     }
     .mig .play {
-        width: 329px;
+        width: 100%;
         height: 315px;
     }
     .mig .play img {
@@ -1089,7 +1156,9 @@ footer hr {
     }
     .courses .course {
         width: 100%;
-        height: 500px;
+    }
+    .course-one h5 {
+        font-size: 14px;
     }
     .course img {
         width: 95%;
@@ -1270,6 +1339,11 @@ footer hr {
         justify-content: center;
         align-items: center;
         padding-top: 15px;
+        background: linear-gradient(91.81deg, #ff110021 1.76%, #ff6a6a7a 98.7%);
+    }
+    .navbar-nav {
+        width: 100%;
+        margin-top: 18px;
     }
     .mig .play {
         width: 100%;
@@ -1301,11 +1375,13 @@ footer hr {
         padding: 0 0;
     }
     .courses .course {
-        height: 424px;
         width: 100%;
     }
     .course img {
         width: 95%;
+    }
+    .course-one h5 {
+        font-size: 14px;
     }
     .course-txt h3 {
         padding: 20px 0 8px 0;
@@ -1331,8 +1407,8 @@ footer hr {
         height: 193px;
     }
     .certificate p {
-        line-height: 20px;
-        padding-bottom: 0px;
+        line-height: 22px;
+        padding-bottom: 16px;
         padding-right: 0px;
     }
     .certificate h2 {
@@ -1343,7 +1419,14 @@ footer hr {
     }
     .job {
         width: 100%;
-        height: 141px;
+        max-height: 141px;
+        padding: 0 6px;
+    }
+    .job ul li {
+        padding-right: 8px;
+    }
+    ul.ms-auto {
+        margin-top: 66px;
     }
     .job-btn a {
         width: 69px;
@@ -1363,7 +1446,7 @@ footer hr {
         padding-top: 40px;
     }
     .app-txt {
-        padding-top: 69px;
+        padding-top: 50px;
         padding-left: 0px;
     }
     .app-txt ul li a img {
@@ -1429,7 +1512,7 @@ footer hr {
         width: 100%;
     }
     .footer-contact ul li h3 {
-        width: 37%;
+        width: 56%;
     }
     .footer-logo-sec ul li a {
         width: 25px;
@@ -1441,7 +1524,7 @@ footer hr {
         text-align: center;
     }
     .row.align-item-center {
-        height: 547px;
+        height: 450px;
     }
     .banner-txt p {
         padding-bottom: 11px;
@@ -1456,7 +1539,7 @@ footer hr {
     }
     header {
         background-size: cover;
-        height: 609px;
+        height: 540px;
     }
     .mig-txt h6 {
         margin-top: 40px;
@@ -1495,6 +1578,7 @@ footer hr {
     }
     .certif-row .gradient-btn {
         justify-content: flex-start;
+        margin: 0;
     }
     .job-board {
         padding: 0px 0;
@@ -1535,4 +1619,11 @@ footer hr {
     section.top-courses {
         padding-bottom: 28px;
     }
+    section.center-heading {
+        padding: 52px 0 0 0;
+    }
+    /* .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+        opacity: 1;
+        background: red;
+    } */
 }
