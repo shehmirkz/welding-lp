@@ -1133,6 +1133,14 @@ footer hr {
         width: 140px;
         height: 41px;
     }
+    .gd-job {
+        width: 80px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
 }
 
 /* Landscape phones and portrait tablets */
@@ -1348,6 +1356,14 @@ footer hr {
     .mig-txt {
         padding-top: 23px;
     }
+    .gd-job {
+        width: 70px;
+        height: 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
 }
 
 /* Landscape phones and smaller */
@@ -1468,7 +1484,7 @@ footer hr {
         padding-right: 8px;
     }
     ul.ms-auto {
-        margin-top: 66px;
+        margin-top: 30px;
     }
     .job-btn a {
         width: 69px;
@@ -1686,5 +1702,13 @@ footer hr {
     }
     .certif-row {
         padding: 51px 0 0 0;
+    }
+    .gd-job {
+        width: 70px;
+        height: 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
 }
