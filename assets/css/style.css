@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,800;1,400;1,700&display=swap');
+
 body {
     background-color: #000;
 }
-h1, h2, h3, h4, h5, h6, p , a, span {
+h1, h2, h3, h4, h5, h6, p , a, span, button {
     font-family: 'Mulish', sans-serif;
     color: #fff;
 }
@@ -55,34 +56,99 @@ p {
     color: #BBC0C6;
     font-weight: 400;
 }
-.gradient-btn a {
-    height: 53px;
+/* Button Styling Start Here */
+.gradient-b {
+    position: relative;
+    z-index: 100;
+}
+.gb {
+    padding: 8px 20px;
+    margin-right: 25px;
+    cursor: pointer;
+    font-size: 16px;
+  
+  }
+  .gb-bordered-gray {
+    padding: 6px 20px;
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: 0.5s all;
+    color: #FF6A6A;
+    background-color: #141E31;
     width: 186px;
-    border-radius: 8px;
-    background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);   
-    color: #fff;
-    padding: 8px 17px;
+    height: 53px;
+  }
+  .gb-bordered-gray:after {
+    transition: 0.5s all;
+    position: absolute;
+    top: -2px;
+   left: -2px;
+   right: -2px;
+   bottom: -2px;
+    content: '';
+    z-index: -1;
+    border-radius: 4px;
+}
+  .gb-bordered {
+       padding: 6px 20px;
+       position: relative;
+       border: 2px solid transparent;
+       background-clip: padding-box;
+       transition: 0.5s all;
+     color: #FF6A6A;
+     background-color: #000;
+     width: 186px;
+     height: 53px;
+  }
+  .gb-bordered:after {
+       transition: 0.5s all;
+       position: absolute;
+       top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+       content: '';
+       z-index: -1;
+       border-radius: 4px;
+  }
+  .gb-rounded.gb-bordered:after, .gb-rounded.gb-bordered-gray:after {
+       border-radius: 8px;
+  }
+  .gb-rounded {
+       border-radius: 8px;
+  }
+  .hover-fill {
+       transition: 0.6s all;
+  }
+   .hover-fill:hover {
+       background-color: transparent;
+       color: #fff;
+  }
+  .hover-fill.active {
+       background-color: transparent;
+       color: #fff;
+  }
+  #gb5:after {
+    background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);
+  }
+  .go-btn {
+      justify-content: center;
+      align-items: center;
+  }
+  .gd-job {
+    width: 90px;
+    height: 41px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+}
+.gradient-b {
     text-decoration: none;
-    transition: 0.5s;
 }
-.gradient-btn a:hover {
-    background: transparent;
-    border: 2px solid #FF0F00;
-    color: #FF0F00;
-}
-.gradient-btn a.active {
-    background: transparent;
-    border: 2px solid #FF0F00;
-    color: #FF0F00;
-}
-.gradient-btn a.active:hover {
-    border-radius: 8px;
-    background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);   
-    color: #fff;
-}
+  /* Button Styling Ends Here */
+
 button.slick-prev.slick-arrow {
     background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);
 }
@@ -316,12 +382,6 @@ header {
 .course-row .view-all {
     padding: 50px 0;
 }
-.view-all .gradient-btn {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /* Certificate Section Styling */
 .certificate {
@@ -374,15 +434,6 @@ header {
     width: 158px;
 }
 .job {
-    /* width: 100%;
-    height: 174px;
-    border-radius: 10px;
-    background: #141E31;
-    border: 2px solid #BBC0C6;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 25px; */
     width: 100%;
     height: 174px;
     border-radius: 10px;
@@ -466,7 +517,6 @@ header {
 }
 
 /* Global Post Section Styling */
-
 .global-posts .global-post {
     width: 93%;
     height: auto;
@@ -474,7 +524,7 @@ header {
     border: 2px solid #BBC0C6;
     border-radius: 12px;
     margin-left: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 36px;
 }
 .slick-slide img {
     display: block;
@@ -685,6 +735,7 @@ footer hr {
     justify-content: space-around;
 }
 
+
   /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////Media Query For Responsive//////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -697,12 +748,6 @@ footer hr {
     .top-courses .top-course {
         
     }
-    /* .courses .course {
-        width: 319px;
-    }
-    .course img {
-        width: 98%;
-    } */
     .footer-contact ul li h3 {
         width: 68%;
     }
@@ -865,6 +910,12 @@ footer hr {
     footer hr {
         width: 93%;
     }
+    .mig-txt {
+        padding-top: 10px;
+    }
+    .mig h2 {
+        padding: 18px 0 11px 0;
+    }
 }
 
 /* Portrait tablets and small desktops */
@@ -942,8 +993,7 @@ footer hr {
         padding: 0 0;
     }
     .courses .course {
-        height: 424px;
-        width: 329px;
+        width: 100%;
     }
     .course img {
         width: 95%;
@@ -953,14 +1003,6 @@ footer hr {
     }
     .course-txt p {
         font-size: 16px;
-    }
-    .gradient-btn a {
-        height: 41px;
-        width: 140px;
-    }
-    .view-all .gradient-btn a {
-        width: 168px;
-        height: 41px;
     }
     .certificate .certif {
         width: 329px;
@@ -1075,6 +1117,22 @@ footer hr {
         display: flex;
         margin: 0;
     }
+    .mig-txt {
+        padding-top: 8px;
+    }
+    .gb-bordered {
+        width: 150px;
+        height: 41px;
+    }
+    .gd-view {
+        width: 168px;
+        height: 41px;
+        font-size: 14px;
+    }
+    .gb-bordered-gray {
+        width: 140px;
+        height: 41px;
+    }
 }
 
 /* Landscape phones and portrait tablets */
@@ -1168,14 +1226,6 @@ footer hr {
     }
     .course-txt p {
         font-size: 16px;
-    }
-    .gradient-btn a {
-        height: 41px;
-        width: 140px;
-    }
-    .view-all .gradient-btn a {
-        width: 168px;
-        height: 41px;
     }
     .certificate .certif {
         width: 100%;
@@ -1389,14 +1439,6 @@ footer hr {
     .course-txt p {
         font-size: 16px;
     }
-    .gradient-btn a {
-        height: 41px;
-        width: 140px;
-    }
-    .view-all .gradient-btn a {
-        width: 168px;
-        height: 41px;
-    }
     .certificate .certif {
         width: 100%;
         height: 285px;
@@ -1531,21 +1573,12 @@ footer hr {
         padding-right: 0;
         text-align: center;
     }
-    .gradient-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
     header {
         background-size: cover;
         height: 540px;
     }
     .mig-txt h6 {
         margin-top: 40px;
-    }
-    .gradient-btn.mig-gradient {
-        justify-content: flex-start;
     }
     .slick-dots li button {
         background: url(../images/dot.png) no-repeat;
@@ -1572,13 +1605,6 @@ footer hr {
         background-color: red;
         background: linear-gradient(91.81deg, #FF0F00 1.76%, #FF6A6A 98.7%);
         border-radius: 3px;
-    }
-    .course-txt .gradient-btn {
-        justify-content: flex-start;
-    }
-    .certif-row .gradient-btn {
-        justify-content: flex-start;
-        margin: 0;
     }
     .job-board {
         padding: 0px 0;
@@ -1611,7 +1637,8 @@ footer hr {
         text-decoration: none;
     }
     .mob-profile a img {
-        width: 140%;
+        width: 117%;
+        padding-right: 17px;
     }
     .course-row .view-all {
         padding: 10px 0;
@@ -1622,8 +1649,42 @@ footer hr {
     section.center-heading {
         padding: 52px 0 0 0;
     }
-    /* .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
-        opacity: 1;
-        background: red;
-    } */
+    .application {
+        padding: 40px 0 0 0;
+    }
+    .go-btn {
+        margin: auto;
+    }
+    button#gb5 {
+        margin: 0;
+    }
+    .banner-btn {
+        justify-content: center;
+        align-items: center;
+    }
+    .gb-bordered {
+        width: 148px;
+        height: 41px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .gradient-b {
+        text-decoration: none;
+    }
+    a.navbar-brand img {
+        width: 75%;
+    }
+    .gb-bordered-gray {
+        width: 140px;
+        height: 41px;
+    }
+    .gd-view {
+        width: 168px;
+        height: 41px;
+    }
+    .certif-row {
+        padding: 51px 0 0 0;
+    }
 }
